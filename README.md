@@ -1,17 +1,118 @@
-Qualigenix - Next.js Landing Page
-=================================
+# Qualigenix - Next.js Landing Page
 
 This is a responsive, SEO-focused landing page for Qualigenix, built with Next.js (App Router) and Tailwind CSS.
 
 The core feature of this project is a simple, file-based "Custom CMS" designed to meet the assessment's requirement for a CMS with SEO goals in check.
 
-Key Features
-------------
+## Key Features
 
 *   **Next.js 14 (App Router):** Utilizes the latest Next.js features for a modern, fast, and scalable web application.
     
-*   **File-Based "Custom CMS":** All page content (headlines, descriptions, stats, FAQs, etc.) is externalized into a single content/home.json file. This allows for easy content updates without touching any React code.
+*   **File-Based "Custom CMS":** All page content (headlines, descriptions, stats, FAQs, etc.) is externalized into a single `content/home.json` file. This allows for easy content updates without touching any React code.
     
-*   **SEO-First Architecture:** The main page (app/page.js) is a **Server Component**. It imports content from the JSON file and passes it as props to child components. This ensures all critical content is Server-Side Rendered (SSR) for optimal search engine crawling and indexing.
+*   **SEO-First Architecture:** The main page (`app/page.js`) is a **Server Component**. It imports content from the JSON file and passes it as props to child components. This ensures all critical content is Server-Side Rendered (SSR) for optimal search engine crawling and indexing.
     
-*   **Dynamic Metadata:** The page's , <meta name="description">, and <meta name="keywords"> are dynamically generated from the metadata object within content/home.json.</div></li><li class="slate-li"><div style="position:relative"><strong class="slate-bold">Hybrid Component Model:</strong> This project correctly demonstrates the power of the App Router by:</div><ul class="slate-ul"><li class="slate-li"><div style="position:relative">Using <strong class="slate-bold">Server Components</strong> (HeroSection, ServiceSection, etc.) for static content display (ideal for SEO).</div></li><li class="slate-li"><div style="position:relative">Using <strong class="slate-bold">Client Components</strong> (Header, FaqSection) for interactivity (useState, onClick), while still receiving their content as props from the parent Server Component.</div></li></ul></li><li class="slate-li"><div style="position:relative"><strong class="slate-bold">Tailwind CSS:</strong> Styled using modern, utility-first CSS.</div></li><li class="slate-li"><div style="position:relative"><strong class="slate-bold">Geist Font:</strong> Implements the Vercel's Geist font for clean typography.</div></li></ul><h2 class="slate-h2">Project Structure</h2><p class="slate-paragraph">Here is the high-level structure focusing on the CMS implementation:</p><pre class="slate-code\_block"><select style="float:right" contenteditable="false"><option value="">Plain text</option><option value="antlr4">ANTLR4</option><option value="bash">Bash</option><option value="c">C</option><option value="csharp">C#</option><option value="css">CSS</option><option value="coffeescript">CoffeeScript</option><option value="cmake">CMake</option><option value="dart">Dart</option><option value="django">Django</option><option value="docker">Docker</option><option value="ejs">EJS</option><option value="erlang">Erlang</option><option value="git">Git</option><option value="go">Go</option><option value="graphql">GraphQL</option><option value="groovy">Groovy</option><option value="html">HTML</option><option value="java">Java</option><option value="javascript">JavaScript</option><option value="json">JSON</option><option value="jsx">JSX</option><option value="kotlin">Kotlin</option><option value="latex">LaTeX</option><option value="less">Less</option><option value="lua">Lua</option><option value="makefile">Makefile</option><option value="markdown">Markdown</option><option value="matlab">MATLAB</option><option value="markup">Markup</option><option value="objectivec">Objective-C</option><option value="perl">Perl</option><option value="php">PHP</option><option value="powershell">PowerShell</option><option value="properties">.properties</option><option value="protobuf">Protocol Buffers</option><option value="python">Python</option><option value="r">R</option><option value="ruby">Ruby</option><option value="sass">Sass (Sass)</option><option value="scss">Sass (Scss)</option><option value="scheme">Scheme</option><option value="sql">SQL</option><option value="shell">Shell</option><option value="swift">Swift</option><option value="svg">SVG</option><option value="tsx">TSX</option><option value="typescript">TypeScript</option><option value="wasm">WebAssembly</option><option value="yaml">YAML</option><option value="xml">XML</option></select><code ><div class="slate-code\_line">/</div><div class="slate-code\_line">├── app/</div><div class="slate-code\_line">│ ├── page.js # ✅ The main home page (Server Component)</div><div class="slate-code\_line">│ ├── layout.js # ✅ The root layout (with metadata template)</div><div class="slate-code\_line">│ └── globals.css # Tailwind directives</div><div class="slate-code\_line">├── components/</div><div class="slate-code\_line">│ ├── Header.js # 🔵 (Client Component for interactive menu)</div><div class="slate-code\_line">│ ├── HeroSection.js # ✅ (Server Component for SEO)</div><div class="slate-code\_line">│ ├── ServiceSection.js # ✅ (Server Component for SEO)</div><div class="slate-code\_line">│ ├── SupportAndTestimonialSection.js # ✅ (Server Component for SEO)</div><div class="slate-code\_line">│ └── FaqSection.js # 🔵 (Client Component for interactive accordion)</div><div class="slate-code\_line">├── content/</div><div class="slate-code\_line">│ └── home.json # <-- ⭐️ YOUR CUSTOM CMS FILE ⭐️</div><div class="slate-code\_line">└── ...</div><div class="slate-code\_line"></div></code></pre><h2 class="slate-h2">Getting Started</h2><ol class="slate-ol"><li class="slate-li"><div style="position:relative">git clone \[https://your-repo-url.com/project-name.git\](https://your-repo-url.com/project-name.git)cd project-name</div></li><li class="slate-li"><div style="position:relative">npm install</div></li><li class="slate-li"><div style="position:relative">npm run dev</div></li><li class="slate-li"><div style="position:relative">Open <a href="https://www.google.com/search?q=http://localhost:3000" class="slate-a" target="\_blank">http://localhost:3000</a> in your browser to see the result.</div></li></ol><h2 class="slate-h2">How to Edit Page Content (The "Custom CMS")</h2><p class="slate-paragraph">This project separates content from code. To change any text, links, or lists on the home page, you <strong class="slate-bold">only need to edit one file:</strong> content/home.json.</p><p class="slate-paragraph">The app/page.js file reads this JSON and injects the content into the correct components.</p><h3 class="slate-h3">Example: Changing the Hero Headline</h3><ol class="slate-ol"><li class="slate-li"><div style="position:relative">Open content/home.json.</div></li><li class="slate-li"><div style="position:relative">Find the hero object.</div></li><li class="slate-li"><div style="position:relative">{ "metadata": { ... }, "hero": { "headline": "Your New Headline Goes Here", // <-- EDIT THIS "description": "...", "features": \[ ... \], ... }, ...}</div></li><li class="slate-li"><div style="position:relative">Save the file. The browser will auto-refresh with the new content.</div></li></ol><p class="slate-paragraph">This same principle applies to all other sections: serviceSection, supportAndTestimonialSection, and faqSection.</p><h3 class="slate-h3">How to Manage SEO</h3><p class="slate-paragraph">To update the page's SEO title, meta description, or keywords, simply edit the metadata object at the top of content/home.json.</p><pre class="slate-code\_block"><select style="float:right" contenteditable="false"><option value="">Plain text</option><option value="antlr4">ANTLR4</option><option value="bash">Bash</option><option value="c">C</option><option value="csharp">C#</option><option value="css">CSS</option><option value="coffeescript">CoffeeScript</option><option value="cmake">CMake</option><option value="dart">Dart</option><option value="django">Django</option><option value="docker">Docker</option><option value="ejs">EJS</option><option value="erlang">Erlang</option><option value="git">Git</option><option value="go">Go</option><option value="graphql">GraphQL</option><option value="groovy">Groovy</option><option value="html">HTML</option><option value="java">Java</option><option value="javascript">JavaScript</option><option value="json">JSON</option><option value="jsx">JSX</option><option value="kotlin">Kotlin</option><option value="latex">LaTeX</option><option value="less">Less</option><option value="lua">Lua</option><option value="makefile">Makefile</option><option value="markdown">Markdown</option><option value="matlab">MATLAB</option><option value="markup">Markup</option><option value="objectivec">Objective-C</option><option value="perl">Perl</option><option value="php">PHP</option><option value="powershell">PowerShell</option><option value="properties">.properties</option><option value="protobuf">Protocol Buffers</option><option value="python">Python</option><option value="r">R</option><option value="ruby">Ruby</option><option value="sass">Sass (Sass)</option><option value="scss">Sass (Scss)</option><option value="scheme">Scheme</option><option value="sql">SQL</option><option value="shell">Shell</option><option value="swift">Swift</option><option value="svg">SVG</option><option value="tsx">TSX</option><option value="typescript">TypeScript</option><option value="wasm">WebAssembly</option><option value="yaml">YAML</option><option value="xml">XML</option></select><code ><div class="slate-code\_line">{</div><div class="slate-code\_line"> "metadata": {</div><div class="slate-code\_line"> "title": "Your New SEO Title | Qualigenix",</div><div class="slate-code\_line"> "description": "Your new, keyword-rich meta description goes here.",</div><div class="slate-code\_line"> "keywords": \[</div><div class="slate-code\_line"> "new keyword",</div><div class="slate-code\_line"> "another keyword",</div><div class="slate-code\_line"> "seo"</div><div class="slate-code\_line"> \]</div><div class="slate-code\_line"> },</div><div class="slate-code\_line"> ...</div><div class="slate-code\_line">}</div><div class="slate-code\_line"></div></code></pre><p class="slate-paragraph">The app/page.js file automatically exports this object, and Next.js will use it to populate the <head> tag of the page.</p><p class="slate-paragraph"></p></x-turndown>
+*   **Dynamic Metadata:** The page's `<title>`, `<meta name="description">`, and `<meta name="keywords">` are dynamically generated from the `metadata` object within `content/home.json`.
+    
+*   **Hybrid Component Model:** This project correctly demonstrates the power of the App Router by:
+    
+    *   Using **Server Components** (`HeroSection`, `ServiceSection`, etc.) for static content display (ideal for SEO).
+        
+    *   Using **Client Components** (`Header`, `FaqSection`) for interactivity (`useState`, `onClick`), while still receiving their content as props from the parent Server Component.
+        
+*   **Tailwind CSS:** Styled using modern, utility-first CSS.
+    
+*   **Geist Font:** Implements the Vercel's Geist font for clean typography.
+    
+
+## Project Structure
+
+Here is the high-level structure focusing on the CMS implementation:
+
+    /
+    ├── app/
+    │   ├── page.js           # ✅ The main home page (Server Component)
+    │   ├── layout.js         # ✅ The root layout (with metadata template)
+    │   └── globals.css       # Tailwind directives
+    ├── components/
+    │   ├── Header.js         # 🔵 (Client Component for interactive menu)
+    │   ├── HeroSection.js    # ✅ (Server Component for SEO)
+    │   ├── ServiceSection.js # ✅ (Server Component for SEO)
+    │   ├── SupportAndTestimonialSection.js # ✅ (Server Component for SEO)
+    │   └── FaqSection.js     # 🔵 (Client Component for interactive accordion)
+    ├── content/
+    │   └── home.json         # <-- ⭐️ YOUR CUSTOM CMS FILE ⭐️
+    └── ...
+    
+
+## Getting Started
+
+1.  **Clone the repository:**
+    
+        git clone [https://your-repo-url.com/project-name.git](https://your-repo-url.com/project-name.git)
+        cd project-name
+        
+    
+2.  **Install dependencies:**
+    
+        npm install
+        
+    
+3.  **Run the development server:**
+    
+        npm run dev
+        
+    
+4.  Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000 "null") in your browser to see the result.
+    
+
+## How to Edit Page Content (The "Custom CMS")
+
+This project separates content from code. To change any text, links, or lists on the home page, you **only need to edit one file:** `content/home.json`.
+
+The `app/page.js` file reads this JSON and injects the content into the correct components.
+
+### Example: Changing the Hero Headline
+
+1.  Open `content/home.json`.
+    
+2.  Find the `hero` object.
+    
+3.  Change the `headline` value:
+    
+        {
+          "metadata": { ... },
+          "hero": {
+            "headline": "Your New Headline Goes Here", // <-- EDIT THIS
+            "description": "...",
+            "features": [ ... ],
+            ...
+          },
+          ...
+        }
+        
+    
+4.  Save the file. The browser will auto-refresh with the new content.
+    
+
+This same principle applies to all other sections: `serviceSection`, `supportAndTestimonialSection`, and `faqSection`.
+
+### How to Manage SEO
+
+To update the page's SEO title, meta description, or keywords, simply edit the `metadata` object at the top of `content/home.json`.
+
+    {
+      "metadata": {
+        "title": "Your New SEO Title | Qualigenix",
+        "description": "Your new, keyword-rich meta description goes here.",
+        "keywords": [
+          "new keyword",
+          "another keyword",
+          "seo"
+        ]
+      },
+      ...
+    }
+    
+
+The `app/page.js` file automatically exports this object, and Next.js will use it to populate the `<head>` tag of the page.
