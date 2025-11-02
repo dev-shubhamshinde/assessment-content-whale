@@ -1,0 +1,266 @@
+{
+  "metadata": {
+    "title": "Qualigenix | End-to-End AR Follow Up Services",
+    "description": "Boost your cash flow with end-to-end AR follow up services. Qualigenix helps you track, resolve, and get paid on every claim, faster.",
+    "keywords": [
+      "AR follow up",
+      "medical billing",
+      "outstanding claims follow up",
+      "healthcare accounts receivable",
+      "denial management"
+    ]
+  },
+  "hero": {
+    "headline": "End-to-End AR Follow Up Services for Maximum Recovery",
+    "description": "AR follow up in medical billing ensures every claim is tracked, resolved, and paid—boosting your cash flow without delays.",
+    "features": [
+      {
+        "name": "118+ EMR/EHR",
+        "description": "Flexible, system-agnostic integration",
+        "iconId": "emr"
+      },
+      {
+        "name": "5M+ Prior Auth",
+        "description": "Fast, accurate approval processing",
+        "iconId": "auth"
+      },
+      {
+        "name": "45+ States",
+        "description": "Extensive PI & WC coverage",
+        "iconId": "states"
+      }
+    ],
+    "primaryCta": {
+      "text": "Book Demo",
+      "href": "#"
+    },
+    "secondaryCta": {
+      "text": "Explore Our Coding Solutions",
+      "href": "#"
+    }
+  },
+  "serviceSection": {
+    "mainHeadline": "Drive Every Payment Home with AR Follow <br /> Up Services",
+    "services": [
+      {
+        "title": "Accelerate Cash Conversion",
+        "description": "Swift follow-up reduces lag time between billing and payment, boosting liquidity.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Recover Hard-to-Collect AR",
+        "description": "We pursue aging claims others abandon, boosting AR recovery solutions for your bottom line.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Streamline AR in Health Care",
+        "description": "Our workflows keep every claim moving efficiently within healthcare accounts receivable tracking systems.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Minimize Denials During Follow-Up",
+        "description": "Proactive re-submissions and clean-up guard against errors and strengthen denial and AR management.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Real-Time AR Performance Metrics",
+        "description": "Live dashboards reveal trends and KPIs across AR workflow optimization and collections.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Improve Outstanding Claims Follow-Up",
+        "description": "Focused attention on unpaid files ensures no revenue is overlooked or forgotten.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Optimized Medical Billing AR Process",
+        "description": "Integrated systems align billing and follow-up to reduce backlogs and error propagation.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      },
+      {
+        "title": "Scalable AR Collections Support",
+        "description": "Flexible follow-up teams expand with your volume to maintain recovery momentum.",
+        "cta": { "text": "Explore Solutions", "href": "#" }
+      }
+    ],
+    "stats": [
+      {
+        "value": "63K",
+        "label": "Patient collection rate supported by real-time eligibility and payment tracking."
+      },
+      {
+        "value": "36 Days",
+        "label": "Average collection cycle achieved through payer-driven workflow optimization."
+      },
+      {
+        "value": "75%",
+        "label": "Credentialing applications processed with automated healthcare billing process integrations."
+      }
+    ],
+    "featuresHeadline": "AR Follow-Up Services That <br /> Maximize Recovery and Minimize Delays",
+    "featuresDescription": "Our accounts receivable follow-up services simplify payer communication and speed up reimbursements. From tracking aged claims to closing payment gaps, we ensure your revenue stays in motion.",
+    "features": [
+      {
+        "name": "Predictive Claim Alerts",
+        "description": "Early warning signals trigger follow-ups for high-risk unpaid claims before they age out.",
+        "iconId": "lightning"
+      },
+      {
+        "name": "Escalation Workflow Trigger",
+        "description": "Automatically escalates unresolved accounts to higher review levels for faster resolution.",
+        "iconId": "lightning"
+      },
+      {
+        "name": "Payment Promise Tracking",
+        "description": "Track payer commitments and enforce timely payments to prevent revenue delays.",
+        "iconId": "lightning"
+      },
+      {
+        "name": "Denial & AR Routing",
+        "description": "Combine dental and AR management to route issues to the right team promptly.",
+        "iconId": "lightning"
+      }
+    ],
+    "specialtiesHeadline": "Expertise Across Accounts <br /> Receivable Follow Up Services",
+    "specialties": [
+      {
+        "name": "Cardiology",
+        "description": "Cardiology",
+        "iconId": "cardiology"
+      },
+      {
+        "name": "Family medicine",
+        "description": "Family medicine",
+        "iconId": "familyMedicine"
+      },
+      {
+        "name": "Durable medical equipment",
+        "description": "Durable medical equipment",
+        "iconId": "dme"
+      },
+      {
+        "name": "Gastroenterology",
+        "description": "Gastroenterology",
+        "iconId": "gastroenterology"
+      },
+      {
+        "name": "Home Health",
+        "description": "Home Health",
+        "iconId": "homeHealth"
+      },
+      {
+        "name": "Orthopedics",
+        "description": "Orthopedics",
+        "iconId": "orthopedics"
+      },
+      {
+        "name": "Primary Care",
+        "description": "Primary Care",
+        "iconId": "primaryCare"
+      },
+      {
+        "name": "Emergency Medicine",
+        "description": "Emergency Medicine",
+        "iconId": "emergencyMedicine"
+      },
+      {
+        "name": "Pediatrics",
+        "description": "Pediatrics",
+        "iconId": "pediatrics"
+      },
+      {
+        "name": "Behavioral Health",
+        "description": "Behavioral Health",
+        "iconId": "behavioralHealth"
+      }
+    ],
+    "specialtiesCta": {
+      "text": "View all our experts",
+      "href": "#"
+    }
+  },
+  "supportAndTestimonialSection": {
+    "insightsHeadline": "Insights to Strengthen Your Medical <br /> Billing Collections Support",
+    "insights": [
+      {
+        "title": "You're invited! Join us for Radar: The Analytics details of our journey",
+        "author": "Rohit Kadam",
+        "date": "13th Jan 2020"
+      },
+      {
+        "title": "You're invited! Join us for Radar: The Analytics details of our journey",
+        "author": "Rohit Kadam",
+        "date": "13th Jan 2020"
+      },
+      {
+        "title": "You're invited! Join us for Radar: The Analytics details of our journey",
+        "author": "Rohit Kadam",
+        "date": "13th Jan 2020"
+      }
+    ],
+    "testimonialsHeadline": "Real Results Reflected Through AR <br /> Performance Metrics in Healthcare",
+    "testimonialsDescription": "Our clients share how AR management in medical billing helped them recover faster and stress less.",
+    "testimonials": [
+      {
+        "quote": "Working with this company has been a game changer for our business. From the initial consultation to the final execution.",
+        "name": "John Doe",
+        "title": "CEO at Digital Services"
+      },
+      {
+        "quote": "Our experience with this awesome company has been nothing short of exceptional. Their dedication to our success was evident at every stage.",
+        "name": "Sara Smith",
+        "title": "Marketing Director"
+      },
+      {
+        "quote": "They helped us redefine our entire marketing strategy and implemented creative solutions that brought our vision to life with results.",
+        "name": "Michael Anderson",
+        "title": "Head of Operations"
+      },
+      {
+        "quote": "Working with this company has been a game changer for our business. From the initial consultation to the final execution.",
+        "name": "John Doe",
+        "title": "CEO at Digital Services"
+      },
+      {
+        "quote": "Our experience with this awesome company has been nothing short of exceptional. Their dedication to our success was evident at every stage.",
+        "name": "Sara Smith",
+        "title": "Marketing Director"
+      },
+      {
+        "quote": "They helped us redefine our entire marketing strategy and implemented creative solutions that brought our vision to life with results.",
+        "name": "Michael Anderson",
+        "title": "Head of Operations"
+      }
+    ]
+  },
+  "faqSection": {
+    "headline": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "How does Qualigenix handle complex outstanding claims follow up?",
+        "answer": "Our system uses AI-driven prioritization to identify complex claims. These are immediately routed to senior specialists who have the expertise to negotiate with payers, appeal denials, and resolve intricate billing issues, ensuring no claim is left unresolved."
+      },
+      {
+        "question": "What makes unpaid claim resolution faster with Qualigenix?",
+        "answer": "We accelerate resolution through automated status checks, denial categorization, and by triggering immediate follow-ups. Our process eliminates manual work, allowing our team to focus only on the claims that require human intervention."
+      },
+      {
+        "question": "How do AR performance metrics healthcare improve collections?",
+        "answer": "Our live dashboards provide 24/7 transparency. You can track key metrics like Days in A/R, first-pass resolution rate, and denial rates. This data helps identify bottlenecks in your revenue cycle, allowing for targeted improvements that directly boost collections."
+      },
+      {
+        "question": "Can your A/R follow-up process adapt to different specialties?",
+        "answer": "Yes. Our platform is system-agnostic and our teams are trained in a wide range of specialties, from Cardiology to Behavioral Health. We customize our follow-up workflows based on the specific rules and common denial reasons for each specialty."
+      },
+      {
+        "question": "How do you ensure transparency during A/R recovery?",
+        "answer": "Transparency is central to our service. Clients have real-time access to performance dashboards and receive regular, detailed reports on all actions taken, recovery amounts, and the status of outstanding claims."
+      },
+      {
+        "question": "What long-term value do your A/R services provide?",
+        "answer": "Beyond immediate cash flow improvement, we provide long-term value by identifying root causes of denials. We give you actionable feedback to improve your front-end processes (like registration and eligibility), reducing future denials and creating a healthier revenue cycle."
+      }
+    ]
+  }
+}
+

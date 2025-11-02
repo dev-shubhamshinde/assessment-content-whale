@@ -1,6 +1,9 @@
-"use client";
+// NO "use client" - This is now a Server Component for SEO!
 
 import React from "react";
+
+// --- Icon components ---
+// (We keep these in the component file)
 
 const EmrIcon = () => (
   <svg
@@ -86,69 +89,67 @@ const ArrowUpRightIcon = () => (
     />
   </svg>
 );
+// --- End Icon components ---
 
-const features = [
-  {
-    name: "118+ EMR/EHR",
-    description: "Flexible, system-agnostic integration",
-    icon: EmrIcon,
-  },
-  {
-    name: "5M+ Prior Auth",
-    description: "Fast, accurate approval processing",
-    icon: AuthIcon,
-  },
-  {
-    name: "45+ States",
-    description: "Extensive PI & WC coverage",
-    icon: StatesIcon,
-  },
-];
+// Map string IDs from JSON to the actual components
+const iconMap = {
+  emr: EmrIcon,
+  auth: AuthIcon,
+  states: StatesIcon,
+};
 
-export default function HeroSection() {
+// Accept `heroData` as a prop
+export default function HeroSection({ heroData }) {
   return (
     <div className="relative isolate overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-16 lg:px-8 lg:py-12">
         <div className="relative z-10">
+          {/* Use content from props */}
           <h1 className="text-4xl font-medium tracking-tight text-gray-900 sm:text-5xl lg:text-4xl">
-            End-to-End AR Follow Up Services for Maximum Recovery
+            {heroData.headline}
           </h1>
+          {/* Use content from props */}
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            AR follow up in medical billing ensures every claim is tracked,
-            resolved, and paid—boosting your cash flow without delays.
+            {heroData.description}
           </p>
 
           <div className="mt-12 space-y-8">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex gap-x-4">
-                <div className="flex-shrink-0">
-                  <feature.icon aria-hidden="true" />
+            {/* Map over features from props */}
+            {heroData.features.map((feature) => {
+              // Get the correct icon component from our map
+              const IconComponent = iconMap[feature.iconId] || EmrIcon;
+              return (
+                <div key={feature.name} className="flex gap-x-4">
+                  <div className="flex-shrink-0">
+                    <IconComponent aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold leading-6 text-gray-900">
+                      {feature.name}
+                    </h3>
+                    <p className="mt-1 text-base leading-7 text-gray-600">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold leading-6 text-gray-900">
-                    {feature.name}
-                  </h3>
-                  <p className="mt-1 text-base leading-7 text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
+            {/* Use CTA content from props */}
             <a
-              href="#"
+              href={heroData.primaryCta.href}
               className="flex items-center justify-center rounded-lg bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
             >
-              Book Demo
+              {heroData.primaryCta.text}
               <ArrowRightIcon />
             </a>
             <a
-              href="#"
+              href={heroData.secondaryCta.href}
               className="flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700"
             >
-              Explore Our Coding Solutions
+              {heroData.secondaryCta.text}
               <ArrowUpRightIcon />
             </a>
           </div>
@@ -158,3 +159,4 @@ export default function HeroSection() {
     </div>
   );
 }
+
