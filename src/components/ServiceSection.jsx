@@ -1,8 +1,4 @@
-// NO "use client" - This is a Server Component for SEO!
-
 import React from "react";
-
-// --- Icon components ---
 
 const ChevronRightIcon = () => (
   <svg
@@ -54,8 +50,6 @@ const ShieldCheckIcon = () => (
     />
   </svg>
 );
-
-// --- Specialty Icon components ---
 
 const CardiologyIcon = () => (
   <svg
@@ -234,7 +228,6 @@ const BehavioralHealthIcon = () => (
   </svg>
 );
 
-// Map string IDs from JSON to the actual components
 const specialtyIconMap = {
   cardiology: CardiologyIcon,
   familyMedicine: FamilyMedicineIcon,
@@ -248,21 +241,17 @@ const specialtyIconMap = {
   behavioralHealth: BehavioralHealthIcon,
 };
 
-// Accept `serviceData` as a prop
 export default function ServiceSection({ serviceData }) {
   return (
     <div className="sm:py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          {/* Use content from props */}
           <h2
             className="text-4xl font-medium tracking-tight text-gray-900 sm:text-4xl"
-            // Use dangerouslySetInnerHTML to render line breaks from JSON
             dangerouslySetInnerHTML={{ __html: serviceData.mainHeadline }}
           />
         </div>
         <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8 lg:grid-cols-6">
-          {/* Map over services from props */}
           {serviceData.services.map((service, index) => {
             const isTwoCardRow = index === 3 || index === 4;
             const cardClass = isTwoCardRow ? "lg:col-span-3" : "lg:col-span-2";
@@ -291,7 +280,6 @@ export default function ServiceSection({ serviceData }) {
 
         <div className="mx-auto max-w-7xl mt-24 sm:mt-14">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
-            {/* Map over stats from props */}
             {serviceData.stats.map((stat) => (
               <div key={stat.value} className="flex flex-col">
                 <dd className="mt-2 text-5xl font-medium tracking-tight text-gray-900">
@@ -317,14 +305,12 @@ export default function ServiceSection({ serviceData }) {
           </div>
 
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {/* Map over features from props */}
             {serviceData.features.map((feature) => (
               <div
                 key={feature.name}
                 className="flex flex-col rounded-2xl p-8 ring-1 ring-gray-200"
                 style={{ backgroundColor: "#dceaf1" }}
               >
-                {/* We use LightningIcon for all features as per original design */}
                 <LightningIcon />
                 <h3 className="mt-4 text-lg font-semibold leading-7 text-gray-900">
                   {feature.name}
@@ -342,14 +328,15 @@ export default function ServiceSection({ serviceData }) {
             <ShieldCheckIcon />
             <h2
               className="mt-4 text-4xl font-medium tracking-tight text-gray-900 sm:text-4xl"
-              dangerouslySetInnerHTML={{ __html: serviceData.specialtiesHeadline }}
+              dangerouslySetInnerHTML={{
+                __html: serviceData.specialtiesHeadline,
+              }}
             />
           </div>
           <div className="mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
-            {/* Map over specialties from props */}
             {serviceData.specialties.map((specialty) => {
               const IconComponent =
-                specialtyIconMap[specialty.iconId] || CardiologyIcon; // Default icon
+                specialtyIconMap[specialty.iconId] || CardiologyIcon;
               return (
                 <div
                   key={specialty.name}

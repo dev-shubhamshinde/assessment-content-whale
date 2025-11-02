@@ -11,20 +11,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// --- UPDATED METADATA BLOCK ---
 export const metadata = {
-  // Use a template for the title.
-  // `%s` will be replaced by the page-specific title
-  // (e.g., "End-to-End AR Follow Up Services | Qualigenix")
   title: {
     template: "%s",
-    default: "Qualigenix - Medical Billing & AR Follow Up", // A fallback title
+    default: "Qualigenix - Medical Billing & AR Follow Up",
   },
-  // Add a good default description for other pages
   description:
     "Qualigenix provides expert medical billing and AR follow up services to boost your revenue cycle.",
 };
-// -------------------------------
 
 export default function RootLayout({ children }) {
   return (

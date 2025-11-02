@@ -1,8 +1,4 @@
-// NO "use client" - This is a Server Component for SEO!
-
 import React from "react";
-
-// --- Icon Components ---
 
 const UserCircleIcon = () => (
   <svg
@@ -43,23 +39,18 @@ const StarIcon = () => (
   </svg>
 );
 
-// --- Main Component ---
-
-// Accept `supportData` as a prop
 export default function SupportAndTestimonialSection({ supportData }) {
   return (
     <div className="bg-white py-24 sm:py-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-2xl">
           <div className="mx-auto max-w-2xl text-center">
-            {/* Use content from props */}
             <h2
               className="text-4xl font-medium tracking-tight text-gray-900 sm:text-4xl"
               dangerouslySetInnerHTML={{ __html: supportData.insightsHeadline }}
             />
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {/* Map over insights from props */}
             {supportData.insights.map((item, index) => (
               <div
                 key={index}
@@ -84,7 +75,6 @@ export default function SupportAndTestimonialSection({ supportData }) {
 
         <div className="mt-24 sm:mt-12">
           <div className="mx-auto max-w-2xl text-center">
-            {/* Use content from props */}
             <h2
               className="text-4xl font-medium tracking-tight text-gray-900 sm:text-4xl"
               dangerouslySetInnerHTML={{
@@ -96,7 +86,6 @@ export default function SupportAndTestimonialSection({ supportData }) {
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {/* Map over testimonials from props */}
             {supportData.testimonials.map((testimonial, index) => (
               <div
                 key={index}

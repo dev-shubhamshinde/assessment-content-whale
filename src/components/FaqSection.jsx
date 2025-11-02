@@ -1,8 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-
-// --- Icon Components ---
+import React, { useState } from "react";
 
 const PlusIcon = () => (
   <svg
@@ -34,10 +32,6 @@ const MinusIcon = () => (
   </svg>
 );
 
-// --- Main Component ---
-
-// This component remains a 'use client' component for interactivity.
-// It receives its content via props from a Server Component.
 export default function FaqSection({ faqData }) {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -45,16 +39,14 @@ export default function FaqSection({ faqData }) {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Check if faqData and faqData.faqs exist before mapping
   if (!faqData || !faqData.faqs) {
-    return null; // or a loading/error state
+    return null;
   }
 
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          {/* Use headline from props */}
           <h2 className="text-4xl font-medium tracking-tight text-gray-900 sm:text-4xl">
             {faqData.headline}
           </h2>
@@ -62,7 +54,6 @@ export default function FaqSection({ faqData }) {
 
         <div className="mx-auto mt-16 max-w-4xl">
           <dl className="space-y-0">
-            {/* Map over faqs from props */}
             {faqData.faqs.map((faq, index) => (
               <div key={faq.question} className="border-b border-gray-200 py-6">
                 <button
